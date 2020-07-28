@@ -1,0 +1,90 @@
+div.containerProductsAdmin{
+    background-color: white;
+}
+
+div.cardProduct{
+    background-color: rgb(2,0,36);
+}
+
+div.categorias{
+    background-color: rgb(2,0,36);;
+}
+
+h3{
+    color: rgb(2,0,36);
+    margin-bottom: 25px;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}
+
+div.card a.productAdmin h5.productTitle {
+    height: 40px;
+    text-align: center;
+}
+
+div.card a.productAdmin{
+    color:black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+div .precio{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(2,0,36);
+    background-color: white;
+    width: 300px;
+    margin-bottom: 40px;
+}
+div .categorias ul{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+div .categorias ul li{
+    text-decoration-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+div .categorias ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+div.card-body  button.btn-editar{
+    background-color: rgb(22, 165, 158);
+    color: white;
+    border: solid 3px rgb(0, 0, 0);
+    font-weight: bold;
+    display: block;
+    width: 180px;
+    margin: auto;
+    font-size: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    
+}
+
+div.card-body  button.btn-eliminar{
+    background-color: rgb(180, 31, 21);
+    color: white;
+    border: solid 3px rgb(0, 0, 0);
+    font-weight: bold;
+    display: block;
+    width: 180px;
+    margin: auto;
+    font-size: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') %>
+  <link href="/stylesheets/contacto.css" rel="stylesheet">
+    
+<body>
+  <%- include('./partials/header') %>
+
+    <div class="row">
+        <div class="col-12">
+            <h1>Contacto</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5 parrafos">
+            <div>
+                <h3>Consultas por Compras Online</h3>
+                <p>Por cualquier inconveniente con la compra de un producto, escribir a <a href="mailto:comprasonline@imperiogamer.com">comprasonline@imperiogamer.com</a></p>
+            </div>
+            <br>
+            <div>
+                <h3>Quiero ser parte de su Equipo</h3>
+                <p>¿Querés ser parte de nuestro equipo de trabajo? Dejanos tu CV en <a href="mailto: rrhh@imperiogamer.com">rrhh@imperiogamer.com</a></p>
+            </div>
+        </div>
+        <div class="offset-1 col-md-5">
+
+            <div id="error"></div>
+            <form action="/contacto"   id="contacto" method="POST" enctype="multipart/form-data"> 
+          
+                <label for="nombre" class="nombre">Nombre y Apellido</label>
+                
+                <br>
+                <input type="text" name="nombre" id="nombre">
+                <div id="error-nombre"></div>
+                <br>
+                <label for="mail">Email</label><br>
+                <input type="mail" name="email" id="email"><br>
+                <div id="error-email"></div>
+                <label for="comentario">Comentario</label><br>
+                <textarea name="comentario" id="comentario" cols="60" rows="5"></textarea><br>
+                <div id="error-comentario"></div>
+              <button class="btn btn-primary">Enviar</button><br>
+          </form>
+        </div>
+    </div>
+    
+    <%- include('./partials/footer') %>
+    <%- include('./partials/scripts') %>
+    <script src="/javascript/contactanos.js"></script>
+</body>
+</html>

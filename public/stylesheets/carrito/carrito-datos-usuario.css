@@ -1,0 +1,394 @@
+* {
+  box-sizing: border-box;
+}
+
+header,
+nav,
+main,
+footer {
+  float: left;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  
+}
+
+header {
+  border: 1px thick black;
+  height: 100px;
+  width: 100%;
+  height: 15%;
+  display: block;
+  background-color: #001f3f;
+}
+
+header a {
+  color: white;
+  display: inline-block;
+  text-align: right;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+header a:hover {
+  background-color: red;
+}
+
+nav {
+  border: 2px solid black;
+  width: 100%;
+}
+
+main {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(47, 79, 79, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: 1px solid black;
+  width: 100%;
+  height: 45%;
+  min-height: 100vh; /* cubre 100% del viewport. */
+}
+
+footer {
+  background-color: #001f3f;
+  border: 1px thick black;
+  width: 100%;
+  color: white;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+}
+
+/* IDs del header */
+
+#logo-box {
+  width: auto;
+}
+
+#logo {
+  width: 70px;
+  height: 70px;
+  margin: 10px 15px 10px 15px;
+  background-color: red;
+  border-radius: 100px;
+}
+
+#logo-container {
+  display: inline-block;
+}
+
+#links {
+  text-align: right;
+  width: 50%;
+  float: right;
+  margin-top: 6px;
+}
+
+/* IDs del nav */
+
+#tus-productos {
+  border: 2px solid black;
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  padding: 31px;
+  background-image: url(/images/tarjetas-credito-carrito/gamepad.jpg);
+  background-size: cover;
+}
+
+#fin-transaccion {
+  border: 2px solid red;
+  width: 50%;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+  opacity: 0.5;
+  padding: 31px;
+  color: white;
+  background-image: url(/images/tarjetas-credito-carrito/tarjeta.jpg);
+  background-size: cover;
+  height: 100%;
+  opacity: 1;
+}
+
+/* IDs del main */
+
+#texto-main button {
+  border: 2px solid black;
+  font-family: "Gotham-Medium", sans-serif;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 30px;
+  background: transparent;
+}
+
+main section {
+  width: 50%;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+aside {
+  width: 50%;
+  flex-wrap: wrap;
+  border: 2px solid red;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  float: right;
+}
+
+p {
+  margin: 3px;
+  padding: 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+div .seccion-resumen {
+  text-align: center;
+}
+
+form {
+  padding: 10px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(47, 47, 79, 1) 48%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  margin-left: 20px;
+  margin-right: 30px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
+  color: white;
+}
+
+form h3 {
+  margin-bottom: 10px;
+}
+
+.datos-comprador {
+  text-align: center;
+}
+
+.confirmar-datos-link {
+  color: brown;
+}
+
+.confirmar-pago-boton {
+  color: white;
+}
+
+/*confirmar datos */
+
+.confirmacion-container {
+  margin-bottom: 10px;
+}
+
+label.label-datos-comprador {
+  padding: 10px;
+  margin: 10px 0x 10px 0px;
+}
+
+.span-datos-comprador {
+  color: blanchedalmond;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.formulario-datos-usuario {
+  padding: 2px;
+  border-radius: 10px;
+  margin: 2px;
+  width: 200px;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.confirmar-pago {
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 10px 0px 20px 20px;
+  background: #d33;
+  color: white;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1);
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.radio-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio {
+  margin-bottom: 10px;
+}
+
+button.finalizar-transaccion {
+  border: 3px solid brown;
+  font-family: "Gotham-medium", sans-serif;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1);
+  color: #a2330d;
+}
+
+#total {
+  background: #ffc671;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
+  padding: 10px;
+}
+
+#div h3 {
+  padding-top: 10px;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+}
+
+#costo-total {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#monto-total {
+  padding: 10px;
+  margin: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #d33;
+  color: white;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 1);
+}
+
+.desglose-container {
+  display: flex;
+  justify-content: center;
+}
+
+#finalizar-compra p {
+  font-size: 12px;
+}
+
+.thumbnails {
+  width: 50px;
+  height: 50px;
+}
+
+.productos {
+  border: 1px solid black;
+  margin: 0px 5px 10px 10px;
+  padding-left: 7px;
+  width: 110px;
+  background-color: #faead2;
+  float: left;
+}
+
+.productos span {
+  font-size: 12px;
+}
+
+h6 {
+  margin: 5px;
+}
+
+#finalizar-compra {
+  text-align: center;
+}
+
+/* IDs del footer */
+
+#tarjetas-de-credito {
+  display: inline-block;
+}
+
+#tarjetas-de-credito p {
+  margin: 0;
+  padding: 0;
+}
+
+#tarjetas-de-credito img {
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+#copyright {
+  float: right;
+}
+
+@media (max-width: 768px) {
+  main section {
+    width: 90%;
+    margin-left: 20px;
+  }
+
+  #costo-total {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  aside {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+  }
+
+  .seccion-resumen h4 {
+    margin-right: 30px;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  .seccion-resumen {
+    margin-left: 26px;
+  }
+
+  .confirmacion-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width: 607px) {
+    #logo-container {
+      position: absolute;
+    }
+
+    #logo {
+      position: relative;
+      top: 20px;
+    }
+  }
+}

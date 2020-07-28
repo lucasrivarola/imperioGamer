@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+    <div class="container" id="contenedor">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-8">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img src="/images/productos/<%=producto.image%>" class="d-block w-100" alt="<%=producto.product_name%>">
+                            </div>
+                        </div>
+                        
+                        </div>
+                </div>
+                <div class="col-12 col-sm-12 col-lg-4" id="producto">
+                    <section>
+                        <h2 id="nameProd"><%=producto.product_name%></h2>
+                        <span id="precio">Precio: $<%=aMiles(producto.price)%></span>
+                        <% if(producto.discount > 0){ %>
+                        <span id="precio">Off: <%=producto.discount%>%</span>
+                       <% let precioFinal = producto.price - ((producto.discount*producto.price)/100)
+							precioFinal = Math.round(precioFinal) %>
+                        <span id="precio">Precio con descuento: $<%=aMiles(precioFinal)%></span>
+                        <% } %>
+                        <span class="otros">Métodos de pago: Débito y Crédito</span>
+                        <span class="otros">Envíos a Capital Federal: Gratis</span>
+                        <% if(producto.languages != null){ %>
+                            <span class="otros">Idioma: <%= producto.languages.language_name%></span>
+                        <% }%>
+                        <% if(producto.platforms != null){ %>
+                            <span class="otros">Plataforma: <%= producto.platforms.platform_name%></span> 
+                        <% }%>
+                        <form action="/user/detail/compra/<%= producto.id %>" method="POST">
+                            
+                            <button type="submit" id="comprar">Comprar Ahora</button>
+                        </form>
+                        <form action="/user/detail/<%= producto.id %>" method="POST">    
+                            <button type="submit" id="carrito">Agregar al Carrito</button>
+                        </form>
+                        
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="caracteristicas">
+                    <br>
+                    <h2>Descripción:</h2><br>
+                    <h5><%= producto.prod_description %></h2>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer') %> 
+    <%- include('./partials/scripts') %> 
+    
+
+</body>
+</html>

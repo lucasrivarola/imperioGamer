@@ -1,0 +1,108 @@
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark menu  ">
+    <a class="navbar-brand" href="/"><img src="/imagenes-home/icono.jpg" alt=""></a>
+    <button class="navbar-toggler boton-menu" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon imagen-menu"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav  barra-menu">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <% if( user == undefined || (user && user.is_admin == "no")) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/#ttofertas">Ofertas</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categorías
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/user/products/1">Juegos</a>
+            <a class="dropdown-item" href="/user/products/2">Consolas</a>
+            <a class="dropdown-item" href="/user/products/3">Pc Gamer</a>
+            <a class="dropdown-item" href="/user/products/4">Sillas</a>
+            <a class="dropdown-item" href="/user/products/5">Accesorios</a>
+          </div>
+          
+        </li>
+        <li class="nav-item">
+          <% if (user) { %>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Perfil
+            </a>
+            <div class="dropdown-menu usuario-deslog" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/user/profile/<%=user.id%>">Ingresa a tu Perfil</a>
+              <form action="/user/profile/deslog/<%= user%>" method="POST">
+              <a class="dropdown-item desloguearse" href="#"><button type="submit">Cerrar Sesion</button></a>
+              </form>
+            </div>
+            
+          </li>
+          <% } else { %>
+          <a id="ingresar" class="nav-link usuario-login" href="/ingreso-usuario">Ingresar</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link usuario-login" href="/registrate">Registrate</a>
+        </li>
+
+        <% } %>
+
+        <ul class="navbar-nav barra-menu ocultar-carrito">
+          <li class="nav-item">
+            <a class="nav-link" href="/carrito/tus-productos">Carrito</a>
+          </li>
+        </ul> 
+      </ul>
+      <form class="form-inline my-2 my-lg-0 barra" action="/search" method="GET">
+        <input class="form-control mr-sm-2  barra-busqueda" type="text" name="search" placeholder="Escribe Aquí" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 btn-buscar" type="submit">Buscar</button>
+      </form>
+      </ul>  
+      <div class="img-carrito">
+      <ul class="navbar-nav barra-menu icono-carrito">
+        <li class="nav-item">
+          <a class="nav-link log-cart" href="/carrito/tus-productos"><img id="carrito-nav" src="/imagenes-home/icono-carrito.svg" alt="icono-login">
+            
+          </a>
+          
+        </li>
+      </ul> 
+    </div>
+      <% } else if (user.is_admin == "yes") { %> 
+        <li class="nav-item">
+          <a class="nav-link" href="/products">Ver productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/products/create">Subir productos</a>
+        </li>
+          
+        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Perfil
+            </a>
+            <div class="dropdown-menu usuario-deslog" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/admin/">Panel de admin</a>
+              <a class="dropdown-item" href="/user/profile/<%=user.id%>">Ingresa a tu Perfil</a>
+              <form action="/user/profile/deslog/<%= user%>" method="POST">
+              <a class="dropdown-item desloguearse" href="#"><button type="submit">Cerrar Sesion</button></a>
+              </form>
+            </div>
+            
+          </li> 
+          <form class="form-inline my-2 my-lg-0 barra" action="/search" method="GET">
+        <input class="form-control mr-sm-2  barra-busqueda" type="text" name="search" placeholder="Escribe Aquí" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 btn-buscar" type="submit">Buscar</button>
+      </form>
+          <% } %>
+        
+      
+  
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <!-- head-->
+ <%- include('./partials/head') %>
+ <link rel="stylesheet" href="/stylesheets/carrito/carrito-productos.css">
+ <!-- head-->
+  <body>
+    <%- include('./partials/header') %>
+    <div class ="container" id="div-cart"> 
+      <main class="row">
+        <% if(carrito.products.length > 0){ %>
+          <div class="col-12 titulo">
+            <h2>Hola <%= user.first_name%>, estos son tus productos: </h2>
+          </div>
+          <% let precio=0; let descuento=0; let total=0; %>
+            <%carrito.products.forEach(function(producto){%>
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                  <div id="prod" class="card">
+                      <a class="productUser" href="/user/detail/<%= producto.id %> ">
+                        <h5 id="titleProd" class="card-title"><strong><%= producto.product_name %></strong> </h5>
+                        <img width="300" height="200" src="/images/productos/<%= producto.image %>" class="card-img-top" alt="<%= producto.name %> ">
+                        <div class="card-body">
+                            <% precio += producto.price;%>
+                            <% descuento += (producto.price * producto.discount)/100;%>
+                            <% if(producto.discount > 0){ %>
+                                 <span>$<%= aMiles(producto.price) %> </span>
+                                 <span id="discount"><%= producto.discount %>% OFF</span>
+                           <% } else { %>
+                                <span>$<%= aMiles(producto.price) %> </span>
+                            <% } %> 
+                                <h6 id="cantProd"></h6>
+                          <form action="/carrito/tus-productos/<%= producto.id %>/<%= producto.carrito_producto.carrito_id %>" method="POST">
+                            <button type="submit">Eliminar producto</button>
+                          </form>
+                        </div>
+                      </a>
+                   </div>
+              </div>
+            <% });%> 
+      </main>
+      <div class="row" >
+              <% total = precio - descuento;%>
+        <div class="col-xs-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-lg-3" id="total">
+          <h3 class="col-12"> La suma de tu carrito:</h3>
+            <div id="total-descuentos">
+              <ul>
+                <li><span><strong>Subtotal:</strong> $<%= aMiles(precio)%></span></li>
+                <li><span><strong>Descuentos:</strong> $<%= aMiles(descuento)%></span></li>
+                <li><span><strong>Total:</strong> $<%= aMiles(total)%></span></li>
+              </ul>
+            </div>
+              <form class="offset-44 col-8" action="/carrito/tus-productos/<%= carrito.products[0].carrito_producto.carrito_id%>" method="POST">
+                <button type="sumbit" class="btn btn-success finalizar-transaccion ">Finalizar pago</button>
+              </form>
+        </div>    
+      </div>
+    <% } else { %>
+      <div class="col-12" id="texto-main"> 
+            <h2 class="offset-4 col-8"> ¡Tu carrito está vacío!</h2>
+            <img class="offset-3 col-5" width="300" height="200" src="\images\tarjetas-credito-carrito/carrito.png" alt ="hombre con carrito vacio">
+            <p class="offset-4 col-8"> No te pierdas lo último en entretenimiento digital. </p>   
+      </div>
+    <% } %>
+      
+    </div>
+<!-- footer begins-->
+<%- include('./partials/footer') %>
+<%- include('./partials/scripts') %>
+<script src="/javascript/carrito.js"></script>
+<!-- footer ends--> 
+  </body>
+</html>

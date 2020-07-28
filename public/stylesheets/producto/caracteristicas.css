@@ -1,0 +1,31 @@
+#caracteristicas h2{
+    display: block;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: solid 2px blanchedalmond;
+}
+#caracteristicas p{
+    font-weight: bold;
+    font-size: 18px;
+}
+#caracteristicas ul{
+    list-style: none;
+}
+@media(min-width:575px){
+    #caracteristicas .ul2{
+        border-left: black solid 1px;
+        padding-left: 50px;
+    }
+    #caracteristicas .ul{
+        margin-left: 20px;
+    }
+}
+@media(min-width: 990px){
+    #caracteristicas ul{
+        background-color: blanchedalmond;
+        border-radius: 20px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+}

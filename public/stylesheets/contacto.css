@@ -1,0 +1,29 @@
+body{
+    color: white
+}
+h1 {
+    border-bottom: 1px solid white;
+    padding: 10px;
+    padding-left: 50px;
+    margin-bottom: 20px;
+}
+div .parrafos{
+    margin-left: 15px;
+}
+form input{
+    width: 90%;
+}
+form textarea{
+    width: 90%;
+}
+#contacto{
+    margin-bottom: 25px;
+}
+div .confirmacion h2{
+    margin-bottom: 90px;
+}
+
+
+#error-nombre,#error-email, #error-comentario {
+    color: red
+}

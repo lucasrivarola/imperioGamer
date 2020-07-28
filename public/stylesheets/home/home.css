@@ -1,0 +1,382 @@
+body{
+    background: rgb(2,0,36);
+    width: 100%;
+}
+
+/*--------------------Header----------------*/
+header nav.menu{
+    background-color: black;
+}
+
+header nav.menu button.boton-menu, header nav.menu button.boton-menu span.imagen-menus{
+    border: 1px solid red;
+}
+
+.icono-carrito{
+    display: none;
+}
+
+div.img-carrito{
+    position: relative;
+    width: 70px;
+    right: -20px;
+}
+
+
+
+
+@media(min-width: 721px){
+    
+    div.collapse input.barra-busqueda{
+        width: 221px;
+    }
+
+    form.barra{
+        margin: 0 5px;
+        display: inline;
+    }
+
+    
+}
+
+@media(min-width: 992px){
+    
+    .icono-carrito{
+        display: block;
+    }
+
+    .ocultar-carrito{
+        display: none;
+    }
+}
+
+
+
+@media(min-width: 1000px) and (max-width:1199px){
+    
+    div.collapse input.barra-busqueda{
+        width: 220px;
+    }
+
+    form.barra{
+        margin: 0 10px;
+    }
+    .ocultar-menu{
+        display: none;
+    }
+}
+
+@media(min-width: 1200px) and (max-width:1439px){
+    div.collapse input.barra-busqueda{
+        width: 400px;
+    }
+
+    form.barra{
+        margin: 0 10px;
+    }
+
+    .ocultar-menu{
+        display: none;
+    }
+}
+
+
+@media(min-width: 1440px){
+    
+    div.collapse input.barra-busqueda{
+        width:400px;
+    }
+    form.barra{
+        margin: 0 60px;
+    }
+}
+
+    ul.barra-menu{
+        margin: 0 10px 0 0;
+    }
+
+    .ocultar-menu{
+        display: none;
+    }
+
+
+
+
+
+        /*--menu-hamburguesa--*/
+
+form button.btn-buscar{
+    color:white;
+    border: 1px solid red;
+}
+
+form button.btn-buscar:hover{
+    background-color: red;
+    border: 1px solid red;
+}
+
+/*-----------------Carrucel------------*/
+div.imagenes-principales{
+    margin: 20px 0;
+}
+
+div.titulo-principal{
+    text-align: center;
+    color: white;
+    margin: 10px 0;
+}
+/*------------Main-----------------*/
+div.producto{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+div.producto h3{
+    text-align: center;
+    color: white;
+    margin: 20px 0;
+    font-size: 20px;
+}
+div.producto .precio{
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+div.titulo-secundario{
+    text-align: center;
+    color: white;
+}
+
+
+div.producto img.producto-img{
+    width: 100%;
+}
+div.producto img.producto-img:hover{
+    opacity: 0.8;
+}
+
+div.titulo-ofertas h2{
+    text-align: center;
+    margin: 10px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.esconder{
+    display: none;
+}
+
+@media(min-width:  767.98px) {
+
+    
+    div.producto h3{
+        
+        font-size: 25px;
+    }
+
+    div.imagenes-principales{
+        width: 75%;
+        margin: 10px auto;
+    }
+}
+
+@media(min-width: 992px){
+    
+    .esconder{
+        display: block;
+    }
+    
+}
+
+/*--------Carrucel Multiple-----------*/
+
+.carousel-ofertas {
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+}
+  
+.slide-box {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.producto .titulo{
+    height: 40px;
+}
+.producto .ofertas{
+    position: absolute;
+    font-size: 20px;
+    left: 5px;
+    top: 65px;
+    color: white;
+    border: 1px white solid;
+    border-radius: 90%;
+    padding: 5px;
+    background-color: red;
+}
+
+
+
+  img.icono-oferta{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+}
+
+  
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .slide-box img {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+}
+
+    div.carousel-item img.icono-oferta, div.carousel-item img.icono-oferta2 {
+        width: 90px;
+    }
+    
+    div.carousel-ofertas div.carousel-item img.icono-oferta{
+        position: absolute;
+        top: 0;
+        right: 0;
+}
+
+
+    div.carousel-ofertas div.carousel-item img.icono-oferta2{
+        position: absolute;
+        top: 0;
+        right: 49%;
+}
+}
+  
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    div.carousel-item img.icono-oferta, div.carousel-item img.icono-oferta2, div.carousel-item img.icono-oferta3{
+        width: 90px;
+    }
+    
+    div.carousel-ofertas div.carousel-item img.icono-oferta{
+        position: absolute;
+        top: 0;
+        right: 0;
+}
+
+
+    div.carousel-ofertas div.carousel-item img.icono-oferta2{
+        position: absolute;
+        top: 0%;
+        right: 32%;
+}
+
+    div.carousel-ofertas div.carousel-item img.icono-oferta3{
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+
+    .slide-box img {
+      -ms-flex: 0 0 33.3333%;
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;    
+}
+}
+  
+@media (min-width: 992px)
+  {
+
+    div.carousel-item img.icono-oferta, div.carousel-item img.icono-oferta2, div.carousel-item img.icono-oferta3, div.carousel-item img.icono-oferta4{
+        width: 90px;
+    }
+    
+    div.carousel-ofertas div.carousel-item img.icono-oferta{
+        position: absolute;
+        top: 0;
+        left: 16%;
+}
+
+
+    div.carousel-ofertas div.carousel-item img.icono-oferta2{
+        position: absolute;
+        top: 0%;
+        left: 41%;
+}
+
+    div.carousel-ofertas div.carousel-item img.icono-oferta3{
+        position: absolute;
+        top: 0;
+        right: 24%;
+}
+
+    div.carousel-ofertas div.carousel-item img.icono-oferta4{
+        position: absolute;
+        top: 0;
+        right: 0;
+}
+    .slide-box img {
+      -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+      max-width: 25%;
+}
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: .5rem;
+}
+
+div.slide-box img{
+    margin: 0 2px;
+   }
+
+/*------------FOOTER------------*/
+footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+@media(min-width: 990px){
+    footer{
+        flex-direction: row;
+    }
+}
+footer article{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    background-color: #001f3f;
+    color: white;
+}
+footer article img{
+    cursor: pointer;
+    border-radius: 100%;
+}
+footer article div{
+    margin-bottom: 20px;
+}
+footer article a{
+    color: white;
+}
+footer article a:hover{
+    color: red;
+    text-decoration: none;
+}
+footer .tarjetas{
+    display: flex;
+    align-items: center;
+}
+#discount{
+    color: green;
+    font-size: 14px;
+}
+#disculpas{
+    color: white;
+    margin-top: 30px;
+}
+

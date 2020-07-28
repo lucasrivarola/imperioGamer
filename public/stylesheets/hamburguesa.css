@@ -1,0 +1,36 @@
+header .hamburguesa nav a{
+    color: white;
+}
+header .hamburguesa .navegador ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.hamburguesa .navegador ul li{
+    border-bottom: solid 1px white;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.hamburguesa .navegador ul li a{
+    font-size: 20px;
+    padding: 10px;
+    display: inline-block;
+}
+.hamburguesa .usuario{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3px solid white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.hamburguesa .usuario a{
+    display: inline-block;
+    font-size: 25px;
+}
+.hamburguesa .menu{
+    background-color: rgba(0,31,63,0.8);
+}

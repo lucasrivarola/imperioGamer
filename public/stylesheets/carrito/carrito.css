@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: brown;
+}
+
+header {
+  width: 100%;
+  background-color: #001f3f;
+}
+
+header a {
+  color: white;
+  display: inline-block;
+  text-align: right;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+header a:hover {
+  color: gray;
+}
+
+nav {
+  border: 2px solid black;
+  width: 100%;
+}
+
+main {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(47, 79, 79, 1) 26%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border: 1px solid black;
+  width: 100%;
+  min-height: 100vh; /* cubre 100% del viewport. */
+  color: blanchedalmond;
+}
+
+footer {
+  background-color: #001f3f;
+  border: 1px thick black;
+  width: 100%;
+  color: white;
+}
+
+header,
+nav,
+main,
+footer {
+  float: left;
+}
+
+/* IDs del header */
+
+#logo-box {
+  width: auto;
+}
+
+#logo {
+  width: 70px;
+  height: 70px;
+  margin: 10px 15px 10px 15px;
+  background-color: red;
+  border-radius: 100px;
+}
+
+#logo-container {
+  display: inline-block;
+}
+
+#links {
+  text-align: right;
+  width: 50%;
+  float: right;
+  margin-top: 6px;
+}
+
+/* IDs del nav */
+
+#tus-productos {
+  width: 50%;
+  float: left;
+  text-align: center;
+  border: 2px solid red;
+  color: white;
+  font-size: 25px;
+  padding: 31px;
+  background-image: url(/images/tarjetas-credito-carrito/gamepad.jpg);
+  background-size: cover;
+}
+
+#fin-transaccion {
+  width: 50%;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+  opacity: 0.5;
+  padding: 31px;
+  color: white;
+  background-image: url(/images/tarjetas-credito-carrito/tarjeta.jpg);
+  background-size: cover;
+  border: 2px solid black;
+}
+
+#fin-transaccion:hover {
+  background-color: #434344;
+  color: black;
+  opacity: 1;
+}
+
+/* IDs del main */
+
+#texto-main {
+  margin: 60px 40px;
+  text-align: center;
+}
+
+#texto-main h2 {
+  font-size: 50px;
+  margin: 10px;
+}
+
+#texto-main p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding-left: 5px;
+}
+
+#texto-main button {
+  border: 2px solid brown;
+  font-family: "Gotham-Medium", sans-serif;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 30px;
+  background: transparent;
+  color: brown;
+  background-color: white;
+  transition: 1s;
+}
+
+#texto-main button:hover {
+  background-color: white;
+  font-size: 20px;
+  
+}
+
+#texto-main button:active {
+  background-color: grey;
+  box-shadow: 0 2px #666;
+}
+
+#texto-main img {
+  height: 150px;
+  width: 200px;
+}
+
+/* IDs del footer */
+
+#tarjetas-de-credito {
+  display: inline-block;
+}
+
+#tarjetas-de-credito p {
+  margin: 0;
+  padding: 0;
+}
+
+#tarjetas-de-credito img {
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+#copyright {
+  float: right;
+}
+
+button #iniciar-compra {
+  color: brown;
+}
+
+@media (max-width: 607px) {
+  #logo-container {
+    position: absolute;
+  }
+
+  #logo {
+    position: relative;
+    top: 20px;
+  }
+}

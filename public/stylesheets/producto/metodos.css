@@ -1,0 +1,48 @@
+#metodos span{
+    display: block;
+}
+#metodos #medios{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: solid 2px blanchedalmond;
+}
+#metodos .tarjetas{
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#metodos article{
+    width: 50px;
+    display: inline-block;
+    border: solid 2px black;
+    height: 30px;
+    border-radius: 5px;
+}
+#credito1{
+    background-size: cover;
+    background-image: url(/images/lucas/img/tarjetas/VISA-símbolo.png);
+}
+#credito2{
+    background-size: cover;
+    background-image: url(/images/lucas/img/tarjetas/mastercard2.jpg);
+}
+#credito3{
+    background-size: cover;
+    background-image: url(/images/lucas/img/tarjetas/american.png);
+}
+#debito1{
+    background-size: cover;
+    background-image: url(/images/lucas/img/tarjetas/VISA-símbolo.png);
+}
+#debito2{
+    background-size: cover;
+    background-image: url(/images/lucas/img/tarjetas/maestro.jpg);
+}
+@media(min-width: 575px){
+    #metodos #debito span{
+        margin-bottom: 34px;
+    }
+}

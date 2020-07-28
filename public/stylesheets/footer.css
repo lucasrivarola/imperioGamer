@@ -1,0 +1,61 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+
+    margin-bottom: 150px;
+}
+
+footer{
+
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin:0!important;
+    position: absolute;
+    bottom: 0;
+    
+    
+}
+@media(max-width: 990px){
+
+    body {
+
+        margin-bottom: 400px;
+
+    }
+
+    footer{
+        flex-direction: row;
+        
+    }
+     
+}
+footer article{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    background-color: #001f3f;
+    color: white;
+}
+footer article img{
+    cursor: pointer;
+    border-radius: 100%;
+}
+footer article div{
+    margin-bottom: 20px;
+}
+footer article a{
+    color: white;
+}
+footer article a:hover{
+    color: red;
+    text-decoration: none;
+}
+footer .tarjetas{
+    display: flex;
+    align-items: center;
+}

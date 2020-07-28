@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('./partials/head') %>
+
+<body>
+  <%-include('./partials/header') %>
+  <div class="container" >
+  
+
+    <h2 class="titulo">INFORMACION DEL PRODUCTO</h2>
+    <form class="createProduct" enctype="multipart/form-data" method="POST" action="/products">
+
+    <div class="errors">
+      <% if (typeof errors != "undefined") { %>
+        <ul  class="lista errors">
+       <% for(var i= 0; i < errors.length; i++) { %>
+         <li class="msg-error"><span><%= errors[i].msg %></span></li>
+        <% } %>
+        </ul>
+      <% } %> 
+    </div>
+      
+      <div class="row input-form">
+        
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xs-6">
+          <label for="section">Sección</label>
+          <input type="text" class="form-control section " id="codigo" name="section"  >
+        </div>  
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8 col-xs-6">
+          <label for="titulo">Titulo</label>
+          <input type="text" class="form-control titulo" id="titulo" name="name" >
+        </div>  
+      </div>
+
+      <div class="row input-form">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+          <label for="categoria">Categoria</label>
+            <select class="custom-select category " name="category">
+              <option value="" >Seleccion la Categoria</option>
+              <option value = "1">Juego</option>
+              <option value = "2">Consola</option>
+              <option value = "3">Pc Gamer</option>
+              <option value = "4">Sillas</option>
+              <option value = "5" >Accesorios</option>
+            </select>
+            <div class="invalid-feedback">Por favor Selecciona Una Opcion</div>
+          
+        </div>   
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8">
+          <label for="validationTextarea">Descripcion</label>
+          <textarea class="form-control description" id="validationTextarea" placeholder="Ingresa Aqui la Descripcion" name="description" ></textarea>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+          <label for="plataforma">Plataforma</label>
+          <div class="form-group">
+            <select class="custom-select plataforma" name="plataforma">
+              <option value="" >Seleccion la Plataforma</option>
+              <option value="1">PlayStation</option>
+              <option value="2">XBOX</option>
+              <option value="3">PC</option>
+            </select>
+            
+            <div class="invalid-feedback">Por favor Selecciona Una Opcion</div>
+          </div>
+        </div> 
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+          <label for="plataforma">Idioma</label>
+          <div class="form-group">
+            <select class="custom-select idioma" name="idioma">
+              <option value="">Seleccion la Plataforma</option>
+              <option value="1">Español</option>
+              <option value="2">Inglés</option>
+              <option value="3">Japonés</option>
+            </select>
+            <div class="invalid-feedback">Por favor Selecciona Una Opcion</div>
+          </div>
+        </div> 
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+          <label for="Precio">Precio</label>
+          <input type="number" class="form-control price" id="Precio" name="price"  >
+        </div> 
+       
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+            <label for="Precio">Descuento</label>
+            <input type="number" min="0" max="100" class="form-control discount" id="oferta" name="discount"  >
+          </div> 
+  
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+            <label for="image">Imagenes</label>
+            <input class="image"type="file"  name="image" >
+          </div> 
+      </div>
+
+
+      <div class=" row container-bt col-xs-6 col-sm-6 col-md-4 col-lg-4">
+        <button class="bt-enviar"  type="submit">Guardar producto</button>
+       </div>
+      
+      
+    </form>
+  </div> 
+    <%-include('./partials/scripts') %>
+    <script src="/javascript/createAndEditProduct.js"></script>
+</body>
+</html>

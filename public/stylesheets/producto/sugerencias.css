@@ -1,0 +1,71 @@
+#sugerencias span{
+    font-weight: bold;
+    margin-top: 30px;
+    display: block;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    border-top: solid 2px blanchedalmond;
+}
+#sugerencias article{
+    display: inline-block;
+    width: 100%;
+    border: black solid 3px;
+    background-size: cover;
+}
+#sug1{  
+    background-image: url(/images/lucas/img/sugerencias/sug1.jpg);
+    height: 30vh;
+}
+#sug2{
+    background-image: url(/images/lucas/img/sugerencias/sug2.jpg);
+    height: 30vh;
+}
+#sug3{
+    background-image: url(/images/lucas/img/sugerencias/sug3.jpg);
+    height: 30vh;
+}
+#sug4{
+    background-image: url(/images/lucas/img/sugerencias/sug4.jpg);
+    height: 30vh;
+}
+#sug5{
+    background-image: url(/images/lucas/img/sugerencias/sug7.jpg);
+    transform: translateX(-200%);
+}
+#sug6{
+    background-image: url(/images/lucas/img/sugerencias/sug6.gif);
+    transform: translateX(-300%);
+}
+@media(min-width: 350px){
+    #sugerencias #sug1, #sug2, #sug3, #sug4{
+        height: 40vh;
+    }
+}
+@media(min-width: 480px){
+    #sugerencias #sug1, #sug2, #sug3, #sug4{
+        height: 50vh;
+    }
+}
+@media(min-width: 575px){
+    #sugerencias span{
+        margin-bottom: 20px;
+    }
+    #sugerencias #sug1, #sug2, #sug3, #sug4{
+        height: 30vh;
+    }
+}
+@media(min-width: 990px){
+    #sugerencias{
+        width: 100%;
+        text-align: start;
+    }
+    #sugerencias span{
+        font-size: 30px;
+    }
+    #sug5, #sug6{
+        transform: translateX(0);
+    }
+    #sug1, #sug2, #sug3, #sug4, #sug5, #sug6{
+       height: 30vh;
+    }
+}

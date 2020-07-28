@@ -1,0 +1,86 @@
+
+
+h2.titulo{
+    text-align: center ;
+    margin: 20px 10px;
+    color: rgb(228, 225, 54);
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+div.input-form{
+    margin: 10px 10px;
+    color: rgb(8, 248, 236)
+}
+
+div.container-bt{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+button.bt-enviar{
+    background: red;
+    width: 100%;
+    font-size: 25px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+@media(min-width: 0px) and (max-width:577px){
+
+    button.bt-enviar{
+        font-size: 19px;
+    }
+}
+
+@media(min-width: 578px) and (max-width:770px){
+
+    button.bt-enviar{
+        font-size: 19px;
+    }
+}
+
+@media(min-width: 769px) and (max-width:990px){
+
+    button.bt-enviar{
+        font-size: 19px;
+    }
+}
+
+div.historial{
+    border: 2px solid rgb(26, 5, 119);
+    height: 200px;
+    margin-top: 20px;
+}
+
+ul.errors{
+    list-style: none;
+}
+
+ul.errors li span{
+    display: block;
+    margin-top: 10px;
+    color: red;
+    
+}
+
+input[type=number]::-webkit-outer-spin-button,
+
+input[type=number]::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+
+    margin: 0;
+
+}
+
+input[type=number] {
+
+    -moz-appearance:textfield;
+
+}
+
+div img.carga{
+    width: 100%;
+}

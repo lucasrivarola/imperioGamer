@@ -1,0 +1,129 @@
+
+div.container-edit{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+section.menu-var{
+    width: 100%;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+div.avatar{
+    overflow: hidden;
+    
+}
+
+div.avatar img{
+    display: block;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    border: 7px solid #fff;
+}
+
+p.nameuser{
+    font-family: 'Anton', sans-serif;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+
+
+
+article.menu-edit ul li {
+    margin: 10px 0;
+    list-style: none;
+}
+article.menu-edit ul button{
+background: none;
+color: inherit;
+border: none;
+padding: 0;
+font: inherit;
+cursor: pointer;
+outline: inherit;
+}
+
+div.derecha{
+    margin-top: 20px;
+}
+div.mensaje-DTS p{
+    color: rgb(228, 225, 54);
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+article.menu-edit ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin: 20px;
+    font-family: 'Anton', sans-serif;
+}
+
+article.menu-edit ul li a:hover{
+    color: rgb(8, 248, 236)
+}
+
+div.derecha label{
+    color: rgb(8, 248, 236)
+}
+
+div.derecha input{
+    color: rgb(0,0,0);
+    margin-bottom: 10px;
+}
+
+div.container-bt{
+    display: flex;
+    justify-content: center;
+}
+
+button.btn-edituser{
+    font-size: 20px;
+}
+
+ul.errors{
+    list-style: none;
+}
+
+ul.errors li span{
+    display: block;
+    margin-top: 10px;
+    color: red;
+    
+}
+
+div.row-inputs{
+    margin: 0;
+}
+
+div.menu-editar ul {
+    text-align: center;
+    padding: 0px;
+}
+
+
+/*--------------- Validacion Front ------- */
+
+input.input-error{
+    border: 3px solid red;
+}
+
+input.input-exito{
+    border: 3px solid green;
+}
+
+
+
+
+

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %> 
+  <link href="/stylesheets/productoAdmin.css" rel="stylesheet">
+  <body>
+    <%- include('./partials/header') %>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 categorias">
+          <ul>
+            <li><a href="#juegos">Juegos</a></li>
+            <li><a href="#consolas">Consolas</a></li>
+            <li><a href="#pcGamer">Pc Gamer</a></li>
+            <li><a href="#sillas">Sillas</a></li>
+            <li><a href="#accesorios">Accesorios</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 id="juegos">Juegos</h3>
+        </div>
+
+          <%juegos.forEach(function(juegos){%>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+              <div class="card" >
+                <a class="productAdmin" href="/user/detail/<%= juegos.id %> ">
+                  <h5 class="card-title productTitle"><strong><%= juegos.product_name %></strong> </h5>
+                  <img width="300" height="200" src="/images/productos/<%= juegos.image %>" class="card-img-top" alt="<%= juegos.name %> ">
+                </a>
+                <div class="card-body">
+                  <form method="GET" action="/products/<%= juegos.id%>/edit">
+                    <button type="sumbit" class="btn btn-editar">Editar</button>
+                  </form>
+                  <form action="/products/<%= juegos.id %>?_method=DELETE" method="POST">
+                    <button type="sumbit" class="btn btn-eliminar">Elminar</button>
+                  </form>
+                </div>
+                
+            </div>
+          </div>
+          <% });%> 
+
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h3 id="consolas">Consolas</h3>
+        </div>
+        <%consolas.forEach(function(consolas){%>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+              <div class="card" >
+                <a class="productAdmin" href="/user/detail/<%= consolas.id %> ">
+                  <h5 class="card-title productTitle"><strong><%= consolas.product_name %></strong> </h5>
+                  <img width="300" height="200" src="/images/productos/<%= consolas.image %>" class="card-img-top" alt="<%= consolas.name %> ">
+                </a>
+                <div class="card-body">
+                  <form method="GET" action="/products/<%= consolas.id%>/edit">
+                    <button type="sumbit" class="btn btn-editar">Editar</button>
+                  </form>
+                  <form action="/products/<%= consolas.id %>?_method=DELETE" method="POST">
+                    <button type="sumbit" class="btn btn-eliminar">Elminar</button>
+                  </form>
+                </div>
+                
+            </div>
+          </div>
+        <% });%> 
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 id="pcGamer">Pc Gamer</h3>
+        </div>
+        <%pcGamer.forEach(function(gamer){%>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card" >
+              <a class="productAdmin" href="/user/detail/<%= gamer.id %> ">
+                <h5 class="card-title productTitle"><strong><%= gamer.product_name %></strong> </h5>
+                <img width="300" height="200" src="/images/productos/<%= gamer.image %>" class="card-img-top" alt="<%= gamer.name %> ">
+              </a>
+              <div class="card-body">
+                <form method="GET" action="/products/<%= gamer.id%>/edit">
+                  <button type="sumbit" class="btn btn-editar">Editar</button>
+                </form>
+                <form action="/products/<%= gamer.id %>?_method=DELETE" method="POST">
+                  <button type="sumbit" class="btn btn-eliminar">Elminar</button>
+                </form>
+              </div>
+              
+          </div>
+        </div>
+        <% });%> 
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 id="sillas">Sillas</h3>
+        </div>
+        <%sillas.forEach(function(sillas){%>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card" >
+              <a class="productAdmin" href="/user/detail/<%= sillas.id %> ">
+                <h5 class="card-title productTitle"><strong><%= sillas.product_name %></strong> </h5>
+                <img width="300" height="200" src="/images/productos/<%= sillas.image %>" class="card-img-top" alt="<%= sillas.name %> ">
+              </a>
+              <div class="card-body">
+                <form method="GET" action="/products/<%= sillas.id%>/edit">
+                  <button type="sumbit" class="btn btn-editar">Editar</button>
+                </form>
+                <form action="/products/<%= sillas.id %>?_method=DELETE" method="POST">
+                  <button type="sumbit" class="btn btn-eliminar">Elminar</button>
+                </form>
+              </div>
+              
+          </div>
+        </div>
+        <% });%> 
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3 id="accesorios">Accesorios</h3>
+        </div>
+        <%accesorios.forEach(function(accesorios){%>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+            <div class="card" >
+              <a class="productAdmin" href="/user/detail/<%= accesorios.id %> ">
+                <h5 class="card-title productTitle"><strong><%= accesorios.product_name %></strong> </h5>
+                <img width="300" height="200" src="/images/productos/<%= accesorios.image %>" class="card-img-top" alt="<%= accesorios.name %> ">
+              </a>
+              <div class="card-body">
+                <form method="GET" action="/products/<%= accesorios.id%>/edit">
+                  <button type="sumbit" class="btn btn-editar">Editar</button>
+                </form>
+                <form action="/products/<%= accesorios.id %>?_method=DELETE" method="POST">
+                  <button type="sumbit" class="btn btn-eliminar">Elminar</button>
+                </form>
+              </div>
+              
+          </div>
+        </div>
+        <% });%> 
+      </div>
+  </div>
+    <%- include('./partials/footer') %>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+  </body>
+</html>

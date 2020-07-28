@@ -1,0 +1,102 @@
+#carouselExampleControls{
+    z-index: 0;
+    margin-top: 40px;
+    border: solid black 3px;
+}
+body{
+    background-image: url(/images/lucas/img/fondo-web3.png);
+}
+#contenedor{
+    background-color: #fff5e6;
+}
+#producto h2{
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    z-index: 0;
+}
+
+div.producto h5{
+    text-align: center;
+    color: white;
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+#producto span{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+#producto #precio{
+    position: relative;
+    z-index: 0;
+    margin-top: 15px;
+    font-size: 30px;
+}
+#producto #conDescuento{
+    color: green;
+}
+#cantidad #stock{
+    border: none;
+    background-color: #fff5e6;
+    margin-bottom: 30px;
+}
+#carrito, #comprar{
+    font-weight: bold;
+    display: block;
+    width: 180px;
+    margin: auto;
+    font-size: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+}
+#comprar{
+    background-color: saddlebrown;
+    color: white;
+    border: solid 3px saddlebrown;
+}
+#carrito{
+    color: saddlebrown;
+    background-color: white;
+    border: solid 3px saddlebrown;
+}
+@media(min-width:575px){
+    #carrito, #comprar{
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
+@media(min-width: 990px){
+    #producto{
+        border-left: solid blanchedalmond 3px;
+    }
+    #producto section{
+        margin-top: 30px;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: blanchedalmond;
+    }
+    #cantidad #stock{
+        background-color: blanchedalmond;
+    }
+    #comprar, #carrito{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #carouselExampleControls{
+        margin-top: 100px;
+    }
+}
+
+div.card {
+    transition: 0.5s;
+}
+
+div.card:hover {
+    transform: scale(1.05);
+ }
+
+

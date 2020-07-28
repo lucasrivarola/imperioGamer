@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('./partials/head') %>
+
+<body>
+  <%-include('./partials/header') %>
+  <div class="container" >
+  
+
+    <h2 class="titulo">INFORMACION DEL PRODUCTO</h2>
+    <form class="createProduct" enctype="multipart/form-data" method="POST" action="/products/<%=products.id%>?_method=PUT">
+
+    <div class="errors">
+      <% if (typeof errors != "undefined") { %>
+        <ul  class="lista errors">
+       <% for(var i= 0; i < errors.length; i++) { %>
+         <li class="msg-error"><span><%= errors[i].msg %></span></li>
+        <% } %>
+        </ul>
+      <% } %> 
+    </div>
+      
+      <div class="row input-form">
+        
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xs-6">
+          <label for="codigo">Sección</label>
+          <input type="text" value="<%= products.section %>" class="form-control section " id="codigo" name="section"  >
+        </div>  
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8 col-xs-6">
+          <label for="titulo">Titulo</label>
+          <input type="text" value="<%= products.product_name %>" class="form-control titulo" id="titulo" name="name" >
+        </div>  
+      </div>
+
+      <div class="row input-form">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+          <label for="categoria">Categoria</label>
+            <select class="custom-select category " name="category">
+              <option value="" >Seleccion la Categoria</option>
+              <option <%if( products.category_id == 1){ %> selected <% } %> value= "1" >Juegos</option>
+              <option <%if( products.category_id == 2){ %> selected <% } %> value= "2">Consolas</option>
+              <option <%if( products.category_id == 3){ %> selected <% } %> value= "3">Pc Gamer</option>
+              <option <%if( products.category_id == 4){ %> selected <% } %> value= "4">Sillas</option>
+              <option <%if( products.category_id == 5){ %> selected <% } %> value= "5">Accesorios</option>
+            </select>
+            <div class="invalid-feedback">Por favor Selecciona Una Opcion</div>
+          
+        </div>   
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-8">
+          <label for="validationTextarea">Descripcion</label>
+          <textarea class="form-control description id="validationTextarea" placeholder="Ingresa Aqui la Descripcion" name="description" > <%= products.prod_description %></textarea>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+          <label for="plataforma">Plataforma</label>
+          <div class="form-group">
+            <select class="custom-select plataforma" name="plataforma">
+              <option value="" >Seleccion la Plataforma</option>
+              <option <%if( products.platform_id == 1){ %>selected <% } %> value= "1" >PlayStation</option>
+              <option <%if( products.platform_id == 2){ %>selected <% }  %> value= "2">XBOX</option>
+              <option <%if( products.platform_id == 3){ %>selected <% }  %> value= "3">PC</option>
+            </select>
+            
+            <div class="invalid-feedback">Por favor Selecciona Una Opcion</div>
+          </div>
+        </div> 
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+          <label for="plataforma">Idioma</label>
+          <div class="form-group">
+            <select class="custom-select idioma" name="idioma">
+              <option value="">Seleccion la Plataforma</option>
+              <option <%if( products.platform_id == 1){ %>selected <% } %> value= "1">Español</option>
+              <option <%if( products.platform_id == 2){ %>selected <% } %> value= "2">Inglés</option>
+              <option <%if( products.platform_id == 3){ %>selected <% } %> value= "3">Japonés</option>
+            </select>
+            <div class="invalid-feedback">Por favor Selecciona Una Opcion</div>
+          </div>
+        </div> 
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+          <label for="Precio">Precio</label>
+          <input type="number" value="<%= products.price %>" class="form-control price" id="Precio" name="price"  >
+        </div> 
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+          <label for="Precio">Descuento</label>
+          <input type="number" min="0" max="100" value="<%= products.discount %>" class="form-control discount" id="oferta" name="discount"  >
+        </div> 
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4">
+              <label for="image">Imagen</label><br>
+              <img class="carga" src="/images/productos/<%= products.image %>" alt="<%= products.producto_name %>">
+              <input type="file" name="image"  >
+          </div>   
+      </div>
+
+      <div class=" row container-bt col-xs-6 col-sm-6 col-md-4 col-lg-4">
+        <button class="bt-enviar"  type="submit">Guardar producto</button>
+      </div>
+      
+      
+    </form>
+  </div> 
+    <%-include('./partials/scripts') %>
+    <script src="/javascript/createAndEditProduct.js"></script>
+</body>
+</html>

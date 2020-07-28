@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %>
+    <div class="container">
+      <div class="row">
+          <%productos.forEach(function(producto){%>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                  <div class="card" >
+                    <a class="productUser" href="/user/detail/<%= producto.id %> ">
+                      <h5 class="card-title"><strong><%= producto.product_name %></strong> </h5>
+                      <img width="300" height="200" src="/images/productos/<%= producto.image %>" class="card-img-top" alt="<%= producto.name %> ">
+                      <div class="card-body">
+                          <% if(producto.discount > 0){ %>
+                              <span>$<%= aMiles(producto.price) %> </span>
+                              <span id="discount"><%= producto.discount %>% OFF</span>
+                        <% } else { %>
+                              <span>$<%= aMiles(producto.price) %> </span>
+                          <% } %> 
+                        <% let descript = producto.prod_description %>
+                        <% descript.split() %>
+                        <% let descript2 = "" %>
+                        <% for(var i = 0; i < 62; i++){ 
+                          descript2 += descript[i]
+                        } %>
+                        <p class="card-text"><%= descript2 %>...<span><strong>Sigue leyendo</strong></span></p>
+                      </div>
+                    </a>
+                </div>
+              </div>
+              <% });%>
+        </div>
+    </div>
+      <%- include('./partials/footer') %>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>      
+</body>
+</html>

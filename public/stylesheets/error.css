@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background:url("/Imagenes-Home/error3.jpg");
+  
+  height: 100vh;
+}
+
+#container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(2,0,36);
+  box-shadow: 1px -1px 8px 13px rgba(0,0,0,1);
+}
+
+
+#container .contenido {
+  max-width: 600px;
+  text-align: center;
+}
+
+ h1 {
+  font-size: 15vh;
+  color: blanchedalmond;
+  line-height: 1em;
+}
+
+h4 {
+  position: relative;
+font-size: 1.5em;
+margin-bottom: 20px;
+color: black;
+background: blanchedalmond;
+font-weight: 300;
+padding: 10px 20px;
+display: inline-block;
+}
+
+p {
+  color: white;
+  font-size: 1.2em;
+
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 25px;
+  background: #ff0562;
+  color: white;
+  text-decoration: none;
+  margin-top: 25px;
+  border-radius: 25px;
+  border-bottom: 4px solid #d00d56
+}

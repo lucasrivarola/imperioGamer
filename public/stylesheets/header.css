@@ -1,0 +1,83 @@
+
+header{
+    background-color: #001f3f;
+}
+.buscador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buscador nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buscador nav .navegador{
+    padding: 0;
+    margin: 0;
+}
+.buscador .usuario, .buscador nav .navegador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width: 1200px){
+    .buscador nav .navegador{
+        flex-direction: column;
+    }
+}
+@media(max-width:800px){
+    header .buscador{
+        display: none;
+    }
+}
+@media(min-width:800px){
+    header .hamburguesa{
+        display: none;
+    }
+}
+.buscador .usuario a{
+    display: inline-block;
+    margin-left: 30px;
+}
+.buscador nav .navegador a,.buscador .usuario a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.buscador .navegador .dropdown-menu{
+    background-color: rgba(0,31,63,0.8);
+}
+.buscador .navegador .dropdown-menu a{
+    width: 100%;
+}
+.buscador .navegador .dropdown-menu a:hover{
+    background-color: rgba(255,255,255,0.5);
+    width: 90%;
+}
+.buscador #buscador{
+    height: 30px;
+    border-radius: 30px;
+}
+div.usuario-deslog a.desloguearse button{
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+.suma a{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sumaProd p{
+    color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+}

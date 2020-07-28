@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+div #texto-main{
+  color: white;
+}
+div #texto-main h2{
+  margin-bottom: 30px;
+}
+div #texto-main p{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+div main h2{
+  color: white;
+  margin: 20px 0px;
+}
+div main button{
+  color: white;
+    background-color: saddlebrown;
+    border: solid 3px saddlebrown;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+}
+div #total{
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  padding: 20px;
+  border-radius: 30px;
+  border: 3px rgb(8, 248, 236) solid;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+div #total h3{
+  text-align: center;
+  font-weight: bold;
+}
+div #total ul{
+  margin-top: 30px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+div #total ul li{
+  display: inline-block;
+  text-decoration: none;
+  padding: 20px;
+}
+div #total form{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+div #total .finalizar-transaccion{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    width: 150px;
+    margin-top: 30px;
+}
+
+div.container main div.titulo{
+  text-align: center;
+}
+
+div.container main div.card{
+  width: 100%;
+}
+
+div.container main div.card a.productUser{
+  text-decoration: none;
+  color: black
+}
+
+@media(max-width:540px){
+  div main h2{
+    font-size: 23px;
+  }
+}
+
+@media(min-width:540px) and (max-width:767px){
+  div main h2{
+    font-size: 30px;
+  }
+}

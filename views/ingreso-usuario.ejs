@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+    <div class="container-fluid login">
+        <div class="row">
+            <div class="col-12">
+                <div class="usuario">
+                    <form action="ingreso-usuario" method="POST" class="ingreso-usuario"> 
+                        <article><svg class="bi bi-person-fill" width="10em" height="10em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                        </svg></article>
+                        <% if(typeof errors != "undefined") {%>
+                            <ul id="error-back">
+                                <%for(let i= 0; i < errors.length; i++) {%>
+                                    <li>
+                                        <span class="mgs-error"><%=errors[i].msg%></span>
+                                    </li>
+                                    <% } %>
+                                
+                            </ul>
+                            <% } %>
+            
+                            <div class = "error"></div>
+                        <input class="formulario-usuario" type="text" id="email" name="email" placeholder="Ingrese su número o correo" >
+                        <input class="formulario-usuario" type="password" id="password" name="password" placeholder="Contraseña" >
+                        <div class="checkbox" >
+                           <input name="check" value="Recordame" type="checkbox">
+                           <label>Recordame</label>
+                        </div>
+                        <button class="btn btn-primary" id="btn-usuario">Ingresar</button>
+                        
+                    </form>
+                    <div class="span-usuario">
+                        <span>¿Todavía no tenes Usuario?</span>
+                        <span>No te preocupes, haz click en <a href="/registrate">Registrarse</a> y forma parte de esta Gran comunidad!!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer') %>
+    <script src="/javascript/login.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
